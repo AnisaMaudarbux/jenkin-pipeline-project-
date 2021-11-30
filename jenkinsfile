@@ -1,7 +1,7 @@
 pipeline{
         agent any
         stages{
-            stage('Make Directory'){
+            stage('clone file'){
                 steps{
                 checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/AnisaMaudarbux/jenkin-pipeline-project-.git']]])
                 }
